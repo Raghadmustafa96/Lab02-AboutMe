@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/style.css">
-    <script src="./js/app.js"></script>
     <title>About Me</title>
 </head>
 
@@ -16,144 +15,49 @@
 
     </header>
 
-<section>
+<main>
     <p style= "font-size: 25px;"> 
 
-        My name is Raghad Mustafa , I am 24 years old , studied computer engineering at yarmouk univercity in Irbid 
-        I gruduated in september 2019 , I trined for 6 monthes at oyil lab in my univercity, and I trained on built Desktop application 
-        by Java languge . 
-        after my gruduated I worked as software Qaulity Engineer  for 9 monthes . and I take some cources in network field like CCNA .
+        My name is Raghad Mustafa , I am 24 years old .
 
-        I am a vegetarian person. My best meal is pasta with bashamel and pizza .
-        In my spare time I prefer watching movies and reading novels 
+        <h2> The work experience and education : </h2>
+
+        <ul>
+            <li>studied computer engineering at yarmouk univercity in Irbid and gruduated in september 2019</li>
+            <li> trined for 6 monthes at oyil lab in my univercity, and I trained on built Desktop application 
+                by Java languge .  </li>
+            <li> after gruduated I worked as software Qaulity Engineer  for 9 monthes .</li>
+            <li>take some cources in network field like CCNA . </li>
+          </ul>
+ 
+          I am a vegetarian person. My best meal is pasta with bashamel and pizza .
+          In my spare time I prefer watching movies and reading novels 
+
+        <h2> Top ten movies for me : </h2>
+
+        <ol>
+        <li>The fault in our stars</li>
+        <li>Forgotten</li>
+        <li>The social dilemma</li>
+        <li>The Call</li>
+        <li>the beautiful mind</li>
+        <li>Gifted</li>
+        <li>Like stars on Earth</li>
+        <li>3 idots</li>
+        <li>PK</li>
+        <li>The Bee</li>
+        </ol> 
 
     </p>
+    <aside>  <img src="https://ecdn.teacherspayteachers.com/thumbitem/Back-to-School-Guess-About-Me-Classroom-Game-Activity-1500873710/original-140472-1.jpg" alt="GuessAboutMe" width="430" height="430"> </aside>
 
-</section>
-
-<aside>
-    <img src="https://ecdn.teacherspayteachers.com/thumbitem/Back-to-School-Guess-About-Me-Classroom-Game-Activity-1500873710/original-140472-1.jpg" alt="GuessAboutMe" width="430" height="430">
-</aside>
+</main>
 
     <footer>
         <p> <a href="raghadmustafa96@gmail.com"> Email : raghadmustafa96@gmail.com </a></p>
     </footer>
 
- <script>
-
-var userName = getValidationInfoInput(userName , 'Enter your name please .. ');
-
-alert( userName + '  Welcome to my website guess About me ..   ');
-
-
-
-// q1
-var Q1 = takeUserInput('Is my best meal is fried chicken ?');
-
-while( Q1 === '' || Q1 === null ) {
-    alert( ' you must enter Yes or No Question ..');
-    var Q1 = takeUserInput('Is my best meal is fried chicken ?');
-} 
-
-while( Q1.toLowerCase() !== 'y'  &&  Q1.toLowerCase() !== 'yes' && Q1.toLowerCase() !== 'n' && Q1.toLowerCase() !== 'no') {
-    alert( ' you must enter Yes or No Question ..');
-    var Q1 = takeUserInput('Is my best meal is fried chicken ?');
-} 
-
-if( Q1.toLowerCase() === 'yes' || Q1.toLowerCase() === 'y'){ 
-    alert( 'Ops.. wrong answer ');
-    console.log(Q1);
-} else if (Q1.toLowerCase() === 'no' || Q1.toLowerCase() === 'n'){
-    alert( 'Nice .. correct answer');
-    console.log(Q1);
-}
-
-// q2
-var Q2 = takeUserInput('Is my favourit color is yellow ?');
-
-while( Q2 === '' || Q2 === null ) {
-    alert( ' you must enter Yes or No Question ..');
-    var Q2 = takeUserInput('Is my favourit color is yellow ?');
-} 
-
-while( Q2.toLowerCase() !== 'y'  &&  Q2.toLowerCase() !== 'yes' && Q2.toLowerCase() !== 'n' && Q2.toLowerCase() !== 'no') {
-    alert( ' you must enter Yes or No Question ..');
-    var Q2 = takeUserInput('Is my favourit color is yellow ?');
-} 
-
-if( Q2.toLowerCase() === 'yes' || Q2.toLowerCase() === 'y'){ 
-    alert( 'Nice .. correct answer');
-       console.log(Q2);
-} else if (Q2.toLowerCase() === 'no' || Q2.toLowerCase() === 'n'){
-    alert( 'Ops.. wrong answer ');
-       console.log(Q2);
-}
-
-// q3
-var Q3 = takeUserInput('Is my university located in Irbid?');
-
-while( Q3 === '' || Q3 === null ) {
-    alert( ' you must enter Yes or No Question ..');
-    var Q3 = takeUserInput('Is my university located in Irbid?');
-} 
-
-while( Q3.toLowerCase() !== 'y'  &&  Q3.toLowerCase() !== 'yes' && Q3.toLowerCase() !== 'n' && Q3.toLowerCase() !== 'no') {
-    alert( ' you must enter Yes or No Question ..');
-    var Q3 = takeUserInput('Is my university located in Irbid? ?');
-} 
-
-if( Q3.toLowerCase() === 'yes' || Q3.toLowerCase() === 'y'){ 
-    alert( 'Nice .. correct answer');
-       console.log(Q3);
-} else if (Q3.toLowerCase() === 'no' || Q3.toLowerCase() === 'n'){
-    alert( 'Ops.. wrong answer ');
-       console.log(Q3);
-}
-
-// q4
-var Q4 = takeUserInput('Is my favourit film is the fualt in our stars ?');
-
-while( Q4 === '' || Q4 === null ) {
-    alert( ' you must enter Yes or No Question ..');
-    var Q4 = takeUserInput('Is my favourit film is the fualt in our stars ?');
-} 
-
-while( Q4.toLowerCase() !== 'y'  &&  Q4.toLowerCase() !== 'yes' && Q4.toLowerCase() !== 'n' && Q4.toLowerCase() !== 'no') {
-    alert( ' you must enter Yes or No Question ..');
-    var Q4 = takeUserInput('Is my favourit film is the fualt in our stars ?');
-} 
-
-if( Q4.toLowerCase() === 'yes' || Q4.toLowerCase() === 'y'){ 
-    alert( 'Nice .. correct answer');
-       console.log(Q4);
-} else if (Q4.toLowerCase() === 'no' || Q4.toLowerCase() === 'n'){
-    alert( 'Ops.. wrong answer ');
-       console.log(Q4);
-}
-
-//q5
-
-var Q5 = takeUserInput('Do I have sisters?');
-
-while( Q5 === '' || Q5 === null ) {
-    alert( ' you must enter Yes or No Question ..');
-    var Q5 = takeUserInput('Do I have sisters?');
-} 
-
-while( Q5.toLowerCase() !== 'y'  &&  Q5.toLowerCase() !== 'yes' && Q5.toLowerCase() !== 'n' && Q5.toLowerCase() !== 'no') {
-    alert( ' you must enter Yes or No Question ..');
-    var Q5 = takeUserInput('Do I have sisters?');
-} 
-
-if( Q5.toLowerCase() === 'yes' || Q5.toLowerCase() === 'y'){ 
-    alert( 'Ops.. wrong answer ');
-       console.log(Q5);
-} else if (Q5.toLowerCase() === 'no' || Q5.toLowerCase() === 'n'){
-    alert( 'Nice .. correct answer');
-       console.log(Q5);
-}
-
-    </script>
+     <script src="./js/app.js"></script> 
 
 </body>
 </html>
