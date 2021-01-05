@@ -47,16 +47,16 @@ if( Q1.toLowerCase() === 'yes' || Q1.toLowerCase() === 'y'){
 }
 
 // q2
-var Q2 = takeUserInput('Is my favourit color is yellow ?');
+var Q2 = takeUserInput('Is my favorite color is yellow ?');
 
 while( Q2 === '' || Q2 === null ) {
   alert( ' you must enter Yes or No Question ..');
-  var Q2 = takeUserInput('Is my favourit color is yellow ?');
+  var Q2 = takeUserInput('Is my favorite color is yellow ?');
 }
 
 while( Q2.toLowerCase() !== 'y' && Q2.toLowerCase() !== 'yes' && Q2.toLowerCase() !== 'n' && Q2.toLowerCase() !== 'no') {
   alert( ' you must enter Yes or No Question ..');
-  var Q2 = takeUserInput('Is my favourit color is yellow ?');
+  var Q2 = takeUserInput('Is my favorite color is yellow ?');
 }
 
 if( Q2.toLowerCase() === 'yes' || Q2.toLowerCase() === 'y'){
@@ -155,11 +155,11 @@ var counter1 = 0 ;
 
 for(var i= 0 ; i<4 ; i++ ){
 
-  var Q6 = takeUserInput(' Guess a number on the Box? .. ');
+  var Q6 = takeUserInput(' Guess a favorite number of me ? .. ');
 
   while( Q6 === '' || Q6 === null ) {
     alert( ' you must enter the number ..');
-    var Q6 = takeUserInput(' Guess a number on the box ? .. ');
+    var Q6 = takeUserInput(' Guess a favorite number of me ? .. ');
   }
 
   if(parseInt(Q6) === number){
@@ -193,11 +193,11 @@ var counter = 0 ;
 
 for(var i= 0 ; i<6 ; i++ ){
 
-  var Q7 = takeUserInput('What are the cities that I prefer to visit oneday?');
+  var Q7 = takeUserInput('What are the country that I prefer to visit oneday?');
 
   while( Q7 === '' || Q7 === null ) {
     alert( ' you must enter the input ..');
-    var Q7 = takeUserInput('What are the cities that I prefer to visit oneday?');
+    var Q7 = takeUserInput('What are the country that I prefer to visit oneday?');
   }
 
   switch (Q7.toLowerCase()) {

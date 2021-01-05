@@ -21,3 +21,7 @@ h1{
   header, footer{
     display: block;
    }
+
+   img {
+    float: right;
+  }
