@@ -1,13 +1,15 @@
 'use strict';
 
 //function
-function takeUserInput(message){
-  return prompt(message);
-}
-
+// function takeUserInput(message){
+//   return prompt(message);
+// }
+var questions = ['Is my best meal is fried chicken ?', 'Is my favorite color is yellow ?', 'Is my university located in Irbid?','Is my favourit series is the Start-Up ?', 'Do I have sisters?'];
+var answers = ['n', 'y', 'y', 'y', 'n'];
 function getValidationInfoInput(userInput , message){
   while(userInput === undefined || userInput === '' || userInput === null){
-    var userInput = takeUserInput(message);
+    //this code added by AbdalQader
+    userInput = prompt(message);
   }
   return userInput;
 }
@@ -16,150 +18,75 @@ function getValidationInfoInput(userInput , message){
 var userName = getValidationInfoInput(userName , 'Enter your name please .. ');
 
 var rightCounter = 0 ;
-
-alert( userName + '  Welcome to my website guess About me ..   ');
-console.log( userName + '  Welcome to my website guess About me ..   ');
-
-
-// q1
-var Q1 = takeUserInput('Is my best meal is fried chicken ?');
-
-while( Q1 === '' || Q1 === null ) {
-  alert( ' you must enter Yes or No Question ..');
-  var Q1 = takeUserInput('Is my best meal is fried chicken ?');
+//this code added by AbdalQader
+function WelcomeUser(userName){
+  alert( userName + '  Welcome to my website guess About me ..   ');
+  console.log( userName + '  Welcome to my website guess About me ..   ');
 }
 
-while( Q1.toLowerCase() !== 'y' && Q1.toLowerCase() !== 'yes' && Q1.toLowerCase() !== 'n' && Q1.toLowerCase() !== 'no') {
-  alert( ' you must enter Yes or No Question ..');
-  var Q1 = takeUserInput('Is my best meal is fried chicken ?');
+//This code added by AbdalQader
+var size = questions.length;
+var q;
+for(var i=0; i<size; i++){
+  q = prompt(questions[i]);
+  q = getValidationInfoInput(q, questions[i]);
+  otherAnswers(q, questions[i], answers[i]);
 }
-
-if( Q1.toLowerCase() === 'yes' || Q1.toLowerCase() === 'y'){
-  alert( 'Ops.. wrong answer ');
-  console.log( 'Ops.. wrong answer ');
-  console.log(Q1);
-} else if (Q1.toLowerCase() === 'no' || Q1.toLowerCase() === 'n'){
-  alert( 'Nice .. correct answer');
-  console.log( 'Nice .. correct answer');
-
-  rightCounter++ ;
-  console.log(Q1);
-}
-
-// q2
-var Q2 = takeUserInput('Is my favorite color is yellow ?');
-
-while( Q2 === '' || Q2 === null ) {
-  alert( ' you must enter Yes or No Question ..');
-  var Q2 = takeUserInput('Is my favorite color is yellow ?');
-}
-
-while( Q2.toLowerCase() !== 'y' && Q2.toLowerCase() !== 'yes' && Q2.toLowerCase() !== 'n' && Q2.toLowerCase() !== 'no') {
-  alert( ' you must enter Yes or No Question ..');
-  var Q2 = takeUserInput('Is my favorite color is yellow ?');
-}
-
-if( Q2.toLowerCase() === 'yes' || Q2.toLowerCase() === 'y'){
-  alert( 'Nice .. correct answer');
-  console.log( 'Nice .. correct answer');
-
-  rightCounter++ ;
-  console.log(Q2);
-} else if (Q2.toLowerCase() === 'no' || Q2.toLowerCase() === 'n'){
-  alert( 'Ops.. wrong answer ');
-  console.log( 'Ops.. wrong answer ');
-
-  console.log(Q2);
-}
-
-// q3
-var Q3 = takeUserInput('Is my university located in Irbid?');
-
-while( Q3 === '' || Q3 === null ) {
-  alert( ' you must enter Yes or No Question ..');
-  var Q3 = takeUserInput('Is my university located in Irbid?');
-}
-
-while( Q3.toLowerCase() !== 'y' && Q3.toLowerCase() !== 'yes' && Q3.toLowerCase() !== 'n' && Q3.toLowerCase() !== 'no') {
-  alert( ' you must enter Yes or No Question ..');
-  var Q3 = takeUserInput('Is my university located in Irbid? ?');
-}
-
-if( Q3.toLowerCase() === 'yes' || Q3.toLowerCase() === 'y'){
-  alert( 'Nice .. correct answer');
-  console.log( 'Nice .. correct answer');
-  rightCounter++ ;
-  console.log(Q3);
-} else if (Q3.toLowerCase() === 'no' || Q3.toLowerCase() === 'n'){
-  alert( 'Ops.. wrong answer ');
-  console.log( 'Ops.. wrong answer ');
-
-  console.log(Q3);
-}
-
-// q4
-var Q4 = takeUserInput('Is my favourit series is the Start-Up ?');
-
-while( Q4 === '' || Q4 === null ) {
-  alert( ' you must enter Yes or No Question ..');
-  var Q4 = takeUserInput('Is my favourit series is the Start-Up ?');
-}
-
-while( Q4.toLowerCase() !== 'y' && Q4.toLowerCase() !== 'yes' && Q4.toLowerCase() !== 'n' && Q4.toLowerCase() !== 'no') {
-  alert( ' you must enter Yes or No Question ..');
-  var Q4 = takeUserInput('Is my favourit film is the fualt in our stars ?');
-}
-
-if( Q4.toLowerCase() === 'yes' || Q4.toLowerCase() === 'y'){
-  alert( 'Nice .. correct answer');
-  console.log( 'Nice .. correct answer');
-  rightCounter++ ;
-  console.log(Q4);
-} else if (Q4.toLowerCase() === 'no' || Q4.toLowerCase() === 'n'){
-  alert( 'Ops.. wrong answer ');
-  console.log( 'Ops.. wrong answer ');
-
-  console.log(Q4);
-}
-
-//q5
-
-var Q5 = takeUserInput('Do I have sisters?');
-
-while( Q5 === '' || Q5 === null ) {
-  alert( ' you must enter Yes or No Question ..');
-  var Q5 = takeUserInput('Do I have sisters?');
-}
-
-while( Q5.toLowerCase() !== 'y' && Q5.toLowerCase() !== 'yes' && Q5.toLowerCase() !== 'n' && Q5.toLowerCase() !== 'no') {
-  alert( ' you must enter Yes or No Question ..');
-  var Q5 = takeUserInput('Do I have sisters?');
-}
-
-if( Q5.toLowerCase() === 'yes' || Q5.toLowerCase() === 'y'){
-  alert( 'Ops.. wrong answer ');
-  console.log( 'Ops.. wrong answer ');
-
-  console.log(Q5);
-} else if (Q5.toLowerCase() === 'no' || Q5.toLowerCase() === 'n'){
-  alert( 'Nice .. correct answer');
-  console.log( 'Nice .. correct answer');
-  rightCounter++ ;
-  console.log(Q5);
-}
+//this code added by AbdalQader
+//q1
+// var message = 'Is my best meal is fried chicken ?';
+// var Q1 = prompt(message);
+// Q1 = getValidationInfoInput(Q1, message);
+// otherAnswers(Q1, message, 'n');
 
 
+
+
+// // q2
+// message = 'Is my favorite color is yellow ?';
+// var Q2 = prompt(message);
+// Q2 = getValidationInfoInput(Q2, message);
+// otherAnswers(Q2, message, 'y');
+
+
+
+// // q3
+// message = 'Is my university located in Irbid?';
+// var Q3 = prompt(message);
+// Q3 = getValidationInfoInput(Q3, message);
+// otherAnswers(Q3, message, 'y');
+
+
+// // q4
+// message = 'Is my favourit series is the Start-Up ?';
+// var Q4 = prompt(message)
+// Q4 = getValidationInfoInput(Q4, message);
+// otherAnswers(Q4, message, 'y');
+
+
+// //q5
+
+// message = 'Do I have sisters?';
+// var Q5 = prompt(message);
+// Q5 = getValidationInfoInput(Q5, message);
+// otherAnswers(Q5, message, 'n');
+
+
+//function
+// function takeUserInput(message){
+//   return prompt(message);
+// }
 // Q6
 var number = 17 ;
 var counter1 = 0 ;
 
 for(var i= 0 ; i<4 ; i++ ){
 
-  var Q6 = takeUserInput(' Guess a favorite number of me ? .. ');
+  var Q6 = prompt(' Guess a favorite number of me ? .. ');
 
   while( Q6 === '' || Q6 === null ) {
     alert( ' you must enter the number ..');
-    var Q6 = takeUserInput(' Guess a favorite number of me ? .. ');
+    Q6 = prompt(' Guess a favorite number of me ? .. ');
   }
 
   if(parseInt(Q6) === number){
@@ -193,11 +120,11 @@ var counter = 0 ;
 
 for(var i= 0 ; i<6 ; i++ ){
 
-  var Q7 = takeUserInput('What are the country that I prefer to visit oneday?');
+  var Q7 = prompt('What are the country that I prefer to visit oneday?');
 
   while( Q7 === '' || Q7 === null ) {
     alert( ' you must enter the input ..');
-    var Q7 = takeUserInput('What are the country that I prefer to visit oneday?');
+    Q7 = prompt('What are the country that I prefer to visit oneday?');
   }
 
   switch (Q7.toLowerCase()) {
@@ -242,4 +169,19 @@ if( rightCounter > 4 ){
 } else {
   alert( ' The count of your right answer ..  ' + rightCounter );
   console.log( ' The count of your right answer ..  ' + rightCounter );
+}
+
+
+//this code added by AbdalQader
+function otherAnswers(answer, message, actualAnswer){
+  while( answer.toLowerCase() !== 'y' && answer.toLowerCase() !== 'yes' && answer.toLowerCase() !== 'n' && answer.toLowerCase() !== 'no') {
+    alert( ' you must enter Yes or No Question ..');
+    answer = prompt(message);
+  }
+  if (answer[0].toLowerCase() === actualAnswer){
+    rightCounter+=1;
+    alert( 'Nice .. correct answer');
+  }else{
+    alert( 'Ops.. wrong answer ');
+  }
 }
