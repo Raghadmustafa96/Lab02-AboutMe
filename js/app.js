@@ -16,10 +16,11 @@ function getValidationInfoInput(userInput , message){
 
 
 var userName = getValidationInfoInput(userName , 'Enter your name please .. ');
+welcomeUser(userName);
 
 var rightCounter = 0 ;
 //this code added by AbdalQader
-function WelcomeUser(userName){
+function welcomeUser(userName){
   alert( userName + '  Welcome to my website guess About me ..   ');
   console.log( userName + '  Welcome to my website guess About me ..   ');
 }
